@@ -3,13 +3,13 @@ import parse from "html-react-parser";
 import Container from "../base/Container";
 
 const getSizes = () => {
-  return "(max-width: 375px) 327px, (max-width: 640px) 561px, (max-width: 768px) 576px, (max-width: 1024px) 460px, (max-width: 1200px) 716px,";
+  return "(max-width: 375px) 342px, (max-width: 640px) 607px, (max-width: 768px) 720px, (max-width: 1024px) 475px, (max-width: 1280px) 603px, 732px";
 };
 
 const Textmedia = ({ content }) => {
   return (
     <Container>
-      <div className="grid grid-cols-2 gap-10">
+      <div className="grid md:grid-cols-2 gap-10">
         <div className="prose">{parse(content.itemText)}</div>
         <div className="">
           <picture>
@@ -20,7 +20,10 @@ const Textmedia = ({ content }) => {
               type="image/webp"
             />
             <img
-              src={content.itemMedia[0].fieldPortfolioDefaultImgOpt.src}
+              src={
+                content.itemMedia[0].fieldPortfolioDefaultImgOpt
+                  .placeholderImage
+              }
               srcSet={content.itemMedia[0].fieldPortfolioDefaultImgOpt.srcset}
               alt={content.itemMedia[0].title}
             />

@@ -29,6 +29,7 @@ export const loader = async ({ params, request }) => {
                     srcsetWebp
                     srcset
                     src
+                    placeholderImage
                   }
                 }
               }
@@ -51,7 +52,7 @@ export const loader = async ({ params, request }) => {
       data,
       slug: params.slug,
     },
-    { status: 200, headers: { "cache-control": "max-age=15, must-revalidate" } }
+    { status: 200, headers: { "cache-control": "no-cache" } }
   );
 };
 
