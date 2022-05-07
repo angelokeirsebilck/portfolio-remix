@@ -10,7 +10,10 @@ const Textmedia = ({ content }) => {
   return (
     <Container>
       <div className="grid md:grid-cols-2 gap-10">
-        <div className="prose">{content.itemText}</div>
+        <div
+          className="prose"
+          dangerouslySetInnerHTML={{ __html: content.itemText }}
+        />
         <div className="">
           <picture>
             <source
