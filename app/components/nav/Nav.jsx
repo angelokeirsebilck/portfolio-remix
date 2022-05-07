@@ -9,6 +9,7 @@ function Nav({ nav }) {
         <ul className="flex items-center h-16 text-black">
           <li className="mr-4">
             <NavLink
+              prefetch="render"
               className={({ isActive }) =>
                 isActive ? "text-secondary-default" : undefined
               }
@@ -21,6 +22,7 @@ function Nav({ nav }) {
             return (
               <li className="mr-4" key={index}>
                 <NavLink
+                  prefetch="render"
                   className={({ isActive }) =>
                     isActive ? "text-secondary-default" : undefined
                   }
