@@ -1,5 +1,5 @@
 import React from "react";
-import parse from "html-react-parser";
+// import parse from "html-react-parser";
 import Container from "../base/Container";
 
 const getSizes = () => {
@@ -10,7 +10,7 @@ const Textmedia = ({ content }) => {
   return (
     <Container>
       <div className="grid md:grid-cols-2 gap-10">
-        <div className="prose">{parse(content.itemText)}</div>
+        <div className="prose">{content.itemText}</div>
         <div className="">
           <picture>
             <source
